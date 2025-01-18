@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+  
+    
+}
+.container{
+    display: flex;
+     gap: 20px;
+     margin: 20px;
+     flex-wrap: wrap;
+     background-color: #f2f5f7;
+     justify-content: center;
+}
+.one{
+    border:1px solid black;
+    text-align: center;
+    padding: 10px;
+    justify-content: center;
+    background-color: #fff;
+    margin: 10px;
+    flex-basis: 20%;
+    
+    
+}
