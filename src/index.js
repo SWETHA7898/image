@@ -21,7 +21,7 @@ function Images() {
       </div>
       <div className="one">
         <img src={two} alt="one"  style={{width:"100%",height:"90%"}}></img>
-        <p>Cherry blossom</p>
+        <p> Blossom</p>
 
       </div>
       <div className="one">
