@@ -1,66 +1,38 @@
-import ReactDom from "react-dom/client"
-import one from "./assests/images/one.jpg"
-import two from "./assests/images/two.jpg"
-import three  from "./assests/images/three.jpg"
-import four from "./assests/images/four.jpg"
-import five from "./assests/images/five.jpg"
+import ReactDom from "react-dom/client";
+import one from "./assests/images/one.jpg";
+import two from "./assests/images/two.jpg";
+import three from "./assests/images/three.jpg";
+import four from "./assests/images/four.jpg";
+import five from "./assests/images/five.jpg";
+import six from "./assests/images/six.jpg";
+import "./style2.css";
 
+const root = ReactDom.createRoot(document.getElementById("root"));
 
-import six from "./assests/images/six.jpg"
-import "./style2.css"
+// Array of image data
+const imageData = [
+  { src: one, alt: "Sunflower", caption: "Sunflower" },
+  { src: two, alt: "Blossom", caption: "Blossom" },
+  { src: three, alt: "Rose Plant", caption: "Rose Plant" },
+  { src: four, alt: "Red Rose", caption: "Red Rose" },
+  { src: five, alt: "Tulips", caption: "Tulips" },
+  { src: six, alt: "Daisy", caption: "Daisy" },
+  { src: three, alt: "Rose Plant", caption: "Rose Plant" },
+  { src: five, alt: "Tulips", caption: "Tulips" },
 
-const root = ReactDom.createRoot(document.getElementById("root"))
+];
 
 function Images() {
   return (
     <div className="container">
-      <div className="one">
-        <img src={one} alt="one"  style={{width:"100%",height:"90%"}}></img>
-        <p>Sunflower</p>
-
-      </div>
-      <div className="one">
-        <img src={two} alt="one"  style={{width:"100%",height:"90%"}}></img>
-        <p> Blossom</p>
-
-      </div>
-      <div className="one">
-        <img src={three} alt="one"  style={{width:"100%",height:"90%"}}></img>
-        <p>Rose plant</p>
-
-      </div>
-      <div className="one">
-        <img src={four} alt="one"  style={{width:"100%",height:"90%"}}></img>
-        <p> Red Rose </p>
-
-      </div>
-      <div className="one">
-        <img src={one} alt="one"  style={{width:"100%",height:"90%"}}></img>
-        <p>Sunflower</p>
-
-      </div>
-      <div className="one">
-        <img src={four} alt="one"  style={{width:"100%",height:"90%"}}></img>
-        <p> Red Rose</p>
-
-      </div>
-      <div className="one">
-        <img src={six} alt="one"  style={{width:"100%",height:"90%"}}></img>
-        <p>Daisy</p>
-
-      </div>
-      <div className="one">
-        <img src={five} alt="one"  style={{width:"100%",height:"90%"}}></img>
-        <p>Tulips</p>
-
-      </div>
-      
-
-
+      {imageData.map((image, index) => (
+        <div className="one" key={index}>
+          <img src={image.src} alt={image.alt} style={{ width: "100%", height: "90%" }} />
+          <p>{image.caption}</p>
+        </div>
+      ))}
     </div>
-  )
+  );
 }
 
-
-
-root.render(<Images></Images>)
+root.render(<Images />);
